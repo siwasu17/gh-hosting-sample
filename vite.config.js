@@ -15,4 +15,7 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  // Github pagesに https://<ユーザー名>.github.io/<リポジトリ名>/ というURLで公開されるので、ベースパスを調整
+  // リポジトリ名を入れる
+ base: '/gh-hosting-sample/',
 })
