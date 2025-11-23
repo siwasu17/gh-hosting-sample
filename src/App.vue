@@ -1,5 +1,4 @@
-<script setup lang="ts">
-import { ref } from "vue";
+<script setup>
 const counter = ref(0);
 
 const increment = () => {
