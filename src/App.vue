@@ -1,11 +1,19 @@
-<script setup></script>
+<script setup lang="ts">
+import { ref } from "vue";
+const counter = ref(0);
+
+const increment = () => {
+  counter.value += 1;
+};
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <span>Counter: {{ counter }}</span>
+  <button @click="increment">Click</button>
 </template>
 
-<style scoped></style>
+<style scoped>
+button {
+  margin-left: 10px;
+}
+</style>
