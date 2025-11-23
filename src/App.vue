@@ -1,9 +1,9 @@
 <script setup>
-const counter = ref(0);
+const counter = ref(0)
 
 const increment = () => {
-  counter.value += 1;
-};
+  counter.value += 1
+}
 </script>
 
 <template>
