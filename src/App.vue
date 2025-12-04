@@ -28,8 +28,12 @@ const currentView = computed(() => {
 </script>
 
 <template>
-  <div><a href="#/">Home</a> | <a href="#/about">About</a></div>
-  <component :is="currentView" />
+  <div class="container">
+    <div class="header"><a href="#/">Home</a> | <a href="#/about">About</a></div>
+    <div class="main">
+      <component :is="currentView" />
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -48,5 +52,28 @@ a {
 a:hover {
   color: #adadeb;
   text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header a {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
 }
 </style>
